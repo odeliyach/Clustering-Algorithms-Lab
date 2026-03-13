@@ -35,32 +35,36 @@ This project implements **Lloyd's k-means clustering algorithm** in both **C** a
 ## Mathematical Foundation
 
 ### Euclidean Distance
-The Euclidean distance between two points $\mathbf{p}, \mathbf{q} \in \mathbb{R}^d$ is defined as:
+The Euclidean distance between two points **p**, **q** ∈ ℝ^d is defined as:
 
 $$d(\mathbf{p}, \mathbf{q}) = \sqrt{\sum_{i=1}^{d} (p_i - q_i)^2}$$
 
 ### Lloyd's K-Means Algorithm
 
-Given $N$ datapoints $\mathbf{x}_1, \mathbf{x}_2, \ldots, \mathbf{x}_N \in \mathbb{R}^d$, partition them into $K$ clusters where $1 < K < N$:
+Given N datapoints **x**₁, **x**₂, ..., **x**_N ∈ ℝ^d, partition them into K clusters where 1 < K < N:
 
 #### Initialization
-Initialize centroids as the first $K$ datapoints:
+Initialize centroids as the first K datapoints:
+
 $$\boldsymbol{\mu}_k = \mathbf{x}_k \quad \text{for } k = 1, 2, \ldots, K$$
 
 #### Iteration
 Repeat the following steps until convergence or maximum iterations reached:
 
 **Assignment Step:** Assign each datapoint to the nearest centroid:
-$$C_k^{(t)} = \left\{\mathbf{x}_i : \arg\min_j d(\mathbf{x}_i, \boldsymbol{\mu}_j^{(t)}) = k\right\}$$
+
+$$C_k^{(t)} = \{ \mathbf{x}_i : \arg\min_j d(\mathbf{x}_i, \boldsymbol{\mu}_j^{(t)}) = k \}$$
 
 **Update Step:** Recompute each centroid as the mean of its assigned points:
+
 $$\boldsymbol{\mu}_k^{(t+1)} \leftarrow \frac{1}{|C_k^{(t)}|} \sum_{\mathbf{x}_i \in C_k^{(t)}} \mathbf{x}_i$$
 
 #### Convergence Criterion
 The algorithm terminates when **any** of the following conditions is met:
 
 1. **Epsilon Convergence**: The maximum centroid movement falls below the threshold:
-   $$\max_k d(\boldsymbol{\mu}_k^{(t)}, \boldsymbol{\mu}_k^{(t+1)}) < \epsilon \quad (\epsilon = 0.001)$$
+
+$$\max_k d(\boldsymbol{\mu}_k^{(t)}, \boldsymbol{\mu}_k^{(t+1)}) < \epsilon \quad (\epsilon = 0.001)$$
 
 2. **Iteration Limit**: The iteration count reaches the maximum allowed iterations (default: 400, maximum: 999)
 
@@ -103,7 +107,7 @@ gcc -ansi -Wall -Wextra -Werror -pedantic-errors -o kmeans kmeans.c -lm
 ```
 
 **Parameters:**
-- `K` (required): Number of clusters (integer, must satisfy $1 < K < N$ where $N$ is dataset size)
+- `K` (required): Number of clusters (integer, must satisfy 1 < K < N where N is dataset size)
 - `max_iterations` (optional): Maximum iterations allowed (integer in range [2, 999], default: 400)
 
 #### Example Usage
@@ -194,9 +198,9 @@ Both implementations validate input parameters and data:
 
 | Validation | Error Message | Condition |
 |------------|---------------|-----------|
-| Clusters count | "Incorrect number of clusters!" | $K \leq 1$ or $K \geq N$ |
-| Clusters type | "Incorrect number of clusters!" | $K$ is not an integer |
-| Iterations count | "Incorrect maximum iteration!" | $\text{iter} \leq 1$ or $\text{iter} \geq 1000$ |
+| Clusters count | "Incorrect number of clusters!" | K ≤ 1 or K ≥ N |
+| Clusters type | "Incorrect number of clusters!" | K is not an integer |
+| Iterations count | "Incorrect maximum iteration!" | iter ≤ 1 or iter ≥ 1000 |
 | Iterations type | "Incorrect maximum iteration!" | Iterations not an integer |
 | Input format | (Program terminates) | Invalid CSV format or non-numeric values |
 
@@ -319,12 +323,12 @@ This project is licensed under the **MIT License** – see the [LICENSE](LICENSE
 ## Performance Characteristics
 
 ### Time Complexity
-- **Per iteration**: $O(N \cdot K \cdot d)$
-  - $N$ datapoints × $K$ distance calculations × $d$ dimensions
-- **Total**: $O(I \cdot N \cdot K \cdot d)$ where $I$ is the number of iterations
+- **Per iteration**: O(N · K · d)
+  - N datapoints × K distance calculations × d dimensions
+- **Total**: O(I · N · K · d) where I is the number of iterations
 
 ### Space Complexity
-- $O(N \cdot d + K \cdot d)$ for storing datapoints and centroids
+- O(N · d + K · d) for storing datapoints and centroids
 
 ### Practical Performance
 On typical datasets (N=1000, d=10, K=10, I≤400):
@@ -340,8 +344,7 @@ While this is a portfolio project, suggestions and feedback are welcome. Please 
 
 ## Author
 
-**Odel Iyach**  
-📧 Email: [your-email@example.com]  
+**Odel Iyach**    
 🔗 GitHub: [@odeliyach](https://github.com/odeliyach)  
 💼 Portfolio: [your-portfolio-url]
 

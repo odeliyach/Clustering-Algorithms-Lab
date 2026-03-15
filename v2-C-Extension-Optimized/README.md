@@ -79,15 +79,18 @@ $$\boldsymbol{\mu}_1 \sim \text{Uniform}(X)$$
 Given initial centroids from K-Means++ initialization:
 
 **Assignment Step**: Assign each point to nearest centroid
+
 $$C_k^{(t)} = \{ \mathbf{x}_i : d(\mathbf{x}_i, \boldsymbol{\mu}_k^{(t)}) < d(\mathbf{x}_i, \boldsymbol{\mu}_j^{(t)}) \text{ for all } j \neq k \}$$
 
 **Update Step**: Recompute centroids as mean of assigned points
+
 $$\boldsymbol{\mu}_k^{(t+1)} = \frac{1}{|C_k^{(t)}|} \sum_{\mathbf{x}_i \in C_k^{(t)}} \mathbf{x}_i$$
 
 **Convergence Criterion**: Terminate when centroid movement falls below threshold
+
 $$\max_k d(\boldsymbol{\mu}_k^{(t)}, \boldsymbol{\mu}_k^{(t+1)}) < \epsilon \quad (\epsilon = 0.001)$$
 
-OR maximum iterations reached (default: 300)
+OR maximum iterations reached (default: 300))
 
 ## 📊 Performance Analysis
 

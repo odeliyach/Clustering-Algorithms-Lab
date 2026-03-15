@@ -184,21 +184,9 @@ By viewing this code, you agree to these terms.
 - **v2 README**: Describes hybrid architecture and K-Means++ initialization
 - **EVOLUTION.md**: Details the learning journey and improvements made
 
-## 🤝 How to Use This in Interviews
-
-When interviewing, you can reference this project to discuss:
-
-1. **Algorithm Design**: "I implemented Lloyd's k-means from scratch..."
-2. **Performance**: "Then I optimized it using K-Means++ initialization..."
-3. **Systems Programming**: "I built a Python C extension for performance..."
-4. **Architecture**: "The hybrid approach achieves 5x speedup..."
-5. **Learning**: "This shows my progression as a developer..."
-
 ## 📞 Contact & Links
 
 - 🔗 GitHub: [@odeliyach](https://github.com/odeliyach)
-- 📧 Email: [your-email@example.com]
-- 💼 Portfolio: [your-portfolio-url]
 
 ---
 

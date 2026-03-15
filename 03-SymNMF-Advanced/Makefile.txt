@@ -1,0 +1,11 @@
+.PHONY: build clean
+
+build:
+	python3 setup.py build_ext --inplace
+
+clean:
+	rm -rf build/
+	find . -name "*.so" -delete
+	find . -name "*.pyc" -delete
+
+.PHONY: build clean

@@ -1,0 +1,61 @@
+# ============================================================================
+# Git Ignore for v2-C-Extension-Optimized
+# ============================================================================
+
+# Compiled C extension
+*.so
+*.o
+*.a
+*.out
+*.dylib
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+*.pyc
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv
+
+# Build artifacts
+*.so
+clustering_engine.cpython-*
+_build/
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Test outputs
+*.log
+test_results.txt
+*.tmp
+
+# OS specific
+.DS_Store
+Thumbs.db
+*.ini
+*.cfg
+
+# Sample data (optional - uncomment if needed)
+# *.csv
+# sample_data.csv
+
+# Temporary files
+*.bak
+*.backup

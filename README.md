@@ -1,22 +1,23 @@
-# 🔬 Clustering-Algorithms-Lab
+# Clustering Algorithms Repository
 
-**A Comprehensive Research Repository Exploring Clustering Algorithms: From Basics to Advanced**
+Comprehensive exploration of three clustering algorithms (Lloyd's K-Means, K-Means++, SymNMF) from foundations to advanced techniques. 5.5x performance optimization, hybrid Python-C architecture, and comparative analysis.
 
-![Status](https://img.shields.io/badge/Status-Active%20Research-blue)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue)
 ![C](https://img.shields.io/badge/C-ANSI%20C99-green)
-![License](https://img.shields.io/badge/License-MIT%2B-orange)
+![Speedup](https://img.shields.io/badge/Speedup-5.5x-orange)
 
-## 🎯 Overview
+---
 
-**Clustering-Algorithms-Lab** is a repository documenting my systematic exploration of clustering algorithms:
+## Overview
 
-1. **Foundation** (01-KMeans-Basic): Understanding Lloyd's Algorithm
-2. **Optimization** (02-KMeans-Optimized): K-Means++ with Hybrid Architecture
-3. **Advanced Techniques** (03-SymNMF-Advanced): Spectral Clustering & Matrix Factorization
-4. **Comparative Analysis**: When to use each algorithm
+This repository contains three implementations exploring clustering algorithms and their optimization:
 
-This isn't just "I implemented three algorithms" ,it's **"I systematically studied clustering, optimized each approach, understood their trade-offs, and learned when to use each one."**
+- **01-KMeans-Basic**: Pure C and Python implementation of Lloyd's algorithm
+- **02-KMeans-Optimized**: K-Means++ initialization with Python-C hybrid architecture (5.5x faster)
+- **03-SymNMF-Advanced**: Spectral clustering via matrix factorization for graph data
+
+Each stage builds on the previous, demonstrating algorithm fundamentals, optimization techniques, and when to use advanced approaches.
 
 ---
 

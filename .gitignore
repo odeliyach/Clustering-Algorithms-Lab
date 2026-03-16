@@ -1,0 +1,35 @@
+# Compiled objects
+*.o
+*.so
+*.dylib
+
+# C build artifacts
+01-KMeans-Basic/lloyd
+01-KMeans-Basic/sample_data.csv
+01-KMeans-Basic/c_output.txt
+01-KMeans-Basic/python_output.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test / coverage artifacts
+.pytest_cache/
+htmlcov/
+.coverage
